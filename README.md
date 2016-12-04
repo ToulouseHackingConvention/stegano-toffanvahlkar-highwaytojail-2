@@ -3,20 +3,32 @@
 - Auteurs : toffan et Vahlkar
 - Type : Stéganographie
 
-## Challenge
+## Description
 
-### Description :
+### Fichiers fournis
 
-### Fichiers fournis :
+Aucun, les fichiers exportés seront à ajouter manuellement au challenge All
+night long - part. 1.
 
-### Nom de production
-All night long - part. 2
+## Utilisation
 
-### Changement de flag
+```bash
+make build # construire l'image
+make export # obtenir les fichiers fournis
+```
 
-### Pour lancer
+### Modifier le flag
+
+Modifier `flag.txt` puis `make build && make export`
+
+### Nettoyer
+
+`make clean` supprime les fichiers fournis
+`make clean-all` supprime l'image
 
 ## État
+
+En cours de construction
 
 ### Relecture
 

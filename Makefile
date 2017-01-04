@@ -1,18 +1,14 @@
 IMG = stegano-toffanvahlkar-allnightlong-2
 
-image:
+build:
 	docker build -t $(IMG) .
 
-build: image
-
-export:
+export: build
 	mkdir -p export
 	docker run --rm --entrypoint cat $(IMG) /home/chall/export.tgz > export/export.tgz
 
 clean:
+	-docker rmi $(IMG)
 	rm -rf export
 
-clean-all:
-	-docker rmi $(IMG)
-
-.PHONY: image build export clean clean-all
+.PHONY: build export clean

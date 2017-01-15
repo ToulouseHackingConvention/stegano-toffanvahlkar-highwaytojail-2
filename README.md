@@ -31,8 +31,12 @@ Modifier `flag.txt` puis `make build && make export`
 En cours de construction
 
 ### Relecture
+- vahlkar (version 8abc614)
 
 ### Test
+- vahlkar (version 8abc614):
+    Works well except that the binary `hide` is **not executable outside of the container** if you do not have the same version of sfml.
+    make -C solution2/ for testing;
 
 ### Déploiement
 

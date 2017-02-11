@@ -3,46 +3,39 @@
 - Auteurs : toffan et Vahlkar
 - Type : Stéganographie
 
-## Description
+## Challenge
+### Nom de production
+All night long - part. 2
+
+### Description
+TODO
 
 ### Fichiers fournis
+Aucun, les fichiers exportés sont à ajouter au challenge All night long - part.
+1.
 
-Aucun, les fichiers exportés seront à ajouter manuellement au challenge All
-night long - part. 1.
+### Changement de flag
 
-## Utilisation
+Modifier `flag.txt` puis `make export`
+
+### Usage
 
 ```bash
-make build # construire l'image
-make export # obtenir les fichiers fournis
+# PROD
+make export     # créer les exports
+make clean      # supprime les exports et les images docker
 ```
 
-### Modifier le flag
+### Situation
 
-Modifier `flag.txt` puis `make build && make export`
+| Relecture | Construction | Test | Déploiement |
+| --- | --- | --- | --- |
+| toffan | toffan | toffan | |
+| Vahlkar (8abc614) | Vahlkar | Vahlkar (8abc614) | |
+| | | | |
 
-### Nettoyer
-
-`make clean` supprime les fichiers fournis
-`make clean-all` supprime l'image
-
-## État
-
-En cours de construction
-
-### Relecture
-- vahlkar (version 8abc614)
-
-### Test
-- vahlkar (version 8abc614):
-    Works well except that the binary `hide` is **not executable outside of the container** if you do not have the same version of sfml.
-    make -C solution2/ for testing;
-
-### Déploiement
-
-### Relecture Déploiement
-
-### Test Déploiement
-
-### Docker-compose
-
+### Tests
+- **Vahlkar (version 8abc614):**
+    Works well except that the binary `hide` is **not executable outside of the
+    container** if you do not have the same version of sfml.  `make -C
+    solution2/` for testing.

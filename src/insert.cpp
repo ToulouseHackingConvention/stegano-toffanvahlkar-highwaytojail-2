@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
 
 void usage(int argc, char** argv) {
     if (argc != 4) {
-        std::cout << "Usage: " << argv[0]
+        std::cerr << "Usage: " << argv[0]
                   << " PICTURE SECRET OUTPUT\n"
                      "   PICTURE     filename of the picture to modify\n"
                      "   SECRET      filename of the secret to hide\n"

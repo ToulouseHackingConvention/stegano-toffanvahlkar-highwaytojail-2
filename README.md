@@ -1,22 +1,22 @@
-# All night long - part. 2
+# Highway to jail - part. 2
 
 - Auteurs : toffan et Vahlkar
 - Type : Stéganographie
 
 ## Challenge
 ### Nom de production
-All night long - part. 2
+Highway to jail - part. 2
 
 ### Description
-TODO
+cf. Highway to jail part. 1
 
 ### Fichiers fournis
-Aucun, les fichiers exportés sont à ajouter au challenge All night long - part.
-1.
+Aucun, les fichiers exportés sont à ajouter au challenge *Highway to jail - part.
+1*.
 
 ### Changement de flag
 
-Modifier `flag.txt` puis `make export`
+Automatique à chaque nouvel export (`make export`).
 
 ### Usage
 
@@ -30,7 +30,7 @@ make clean      # supprime les exports et les images docker
 
 | Relecture | Construction | Test | Déploiement |
 | --- | --- | --- | --- |
-| toffan | toffan | toffan | |
+| toffan(4bb1308) | toffan(4bb1308) | toffan | |
 | Vahlkar (8abc614) | Vahlkar | Vahlkar (8abc614) | |
 | | | | |
 

@@ -1,6 +1,13 @@
 IMG = stegano-toffanvahlkar-allnightlong-2
+TEXC = latexmk -lualatex -output-directory=tmp -shell-escape
+FLAG = `uuidgen`
 
-build:
+flag.pdf: src/flag.tex
+	mkdir -p tmp
+	sed src/confidential.tex -e "s/<flag>/$(FLAG)/" > tmp/flag.tex
+	$(TEXC) tmp/flag.tex
+
+build: flag.pdf
 	docker build -t $(IMG) .
 
 export: build
@@ -9,6 +16,6 @@ export: build
 
 clean:
 	-docker rmi $(IMG)
-	rm -rf export
+	rm -rf export tmp
 
 .PHONY: build export clean

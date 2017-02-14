@@ -1,0 +1,63 @@
+\documentclass{letter}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyhead[R]{\footnotesize{Document THCon\{<flag>\}}}
+\fancyfoot[C]{\footnotesize{Ce message contient des informations confidentielles
+destinées à la personne mentionnée ci-dessus. Toute publication, utilisation ou
+diffusion, même partielle, est strictement interdite. Si vous n'êtes pas le
+destinataire, il vous est demandé de ne pas lire, copier, utiliser ou divulguer
+cette communication et d'effacer immédiatement cette communication de votre
+système sous peine de poursuites juridiques.}}
+}
+\pagestyle{plain}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{2pt}
+
+\makeatletter
+\let\ps@empty\ps@plain
+\let\ps@firstpage\ps@plain
+\makeatother
+
+  \signature{Gilles \textsc{Arsenault}}
+  \address{Palais de L'Élysée \\
+    55 Rue du Faubourg Saint-Honoré \\
+    75008 Paris}
+  \date{12 octobre 2015}
+
+\begin{document}%
+
+\begin{letter}{Pour M. Robert B. \textsc{Cooper} \\
+  À délivrer en mains propres}
+  \opening{Monsieur,}
+
+  Par la présente, je confirme le contrat n°48183293125 sur la mise en place
+  d'un système de surveillance électronique par la collecte de renseignements à
+  partir d'Internet et d'autres fournisseurs de services électroniques sur le
+  territoire français.
+
+  Je vous informe, par ailleurs, que la législation en vigueur au moment de la
+  mise en place de ce système ne vous sera pas favorable. L'état français fera
+  le nécessaire pour que vous ne soyez pas contrarié par les questions légales
+  durant les premiers mois d'exploitation.
+
+  Une législation plus permissive devrait cependant pouvoir être enforcée en fin
+  d'année. Conformément aux termes du contrat, les éventuelles manifestations de
+  citoyens seront étouffées par la police nationale.
+
+  Pour des raisons évidentes d'opinion publique, vous serez mis en contact avec
+  nos services secrets afin de rendre votre prochaines visite à l'Élysée aussi
+  discrète que possible. En attendant, veuillez agréer, Monsieur, l'expression
+  de mes sentiments distingués.
+
+  \closing{Cordialement,}
+\end{letter}
+
+\end{document}

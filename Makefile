@@ -4,7 +4,7 @@ FLAG = `uuidgen`
 
 flag.pdf: src/flag.tex
 	mkdir -p tmp
-	sed src/confidential.tex -e "s/<flag>/$(FLAG)/" > tmp/flag.tex
+	sed src/flag.tex -e "s/<flag>/$(FLAG)/" > tmp/flag.tex
 	$(TEXC) tmp/flag.tex
 
 build: flag.pdf
@@ -12,10 +12,11 @@ build: flag.pdf
 
 export: build
 	mkdir -p export
-	docker run --rm --entrypoint cat $(IMG) /home/chall/export.tgz > export/export.tgz
+	echo "$${PWD}/export/:/root/export/"
+	docker run --rm --privileged -v "$${PWD}/export/:/root/export/" $(IMG) ./export.sh
 
 clean:
 	-docker rmi $(IMG)
 	rm -rf export tmp
 
-.PHONY: build export clean
+.PHONY: flag.pdf build export clean

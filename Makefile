@@ -1,4 +1,4 @@
-IMG = stegano-toffanvahlkar-allnightlong-2
+IMG = stegano-toffanvahlkar-highwaytojail-2
 TEXC = latexmk -lualatex -output-directory=tmp -shell-escape
 FLAG = `uuidgen`
 

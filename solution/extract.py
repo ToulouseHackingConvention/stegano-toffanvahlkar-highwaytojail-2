@@ -7,7 +7,7 @@ filename = sys.argv[1] if len(sys.argv) == 2 else "wallpaper.png"
 img = Image.open(filename).convert('RGB')
 
 MASK = 0x3
-X, Y = img.size[0], 20
+X, Y = img.size[0], 23
 
 secret = []
 for y in range(Y):

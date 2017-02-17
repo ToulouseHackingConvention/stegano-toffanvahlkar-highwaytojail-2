@@ -20,4 +20,4 @@ clean:
 	-docker rmi $(IMG)
 	rm -rf export tmp
 
-.PHONY: all uild export clean
+.PHONY: all build export clean

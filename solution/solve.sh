@@ -12,11 +12,11 @@ while read line; do
 done <<< "$(python3 extract.py "$img")"
 echo "$key" > key.asc
 
-echo "Decrypt evidences..."
+echo "Decrypt evidence..."
 mkdir -p gpg && chmod 700 gpg
 gpg --homedir gpg --import key.asc 1> /dev/null 2>&1
-gpg --homedir gpg --decrypt evidences > evidences-plain
-mkdir mnt && sudo mount evidences-plain mnt
+gpg --homedir gpg --decrypt evidence > evidences-plain
+mkdir mnt && sudo mount evidence-plain mnt
 evince mnt/flag.pdf
 
 echo "Clean..."

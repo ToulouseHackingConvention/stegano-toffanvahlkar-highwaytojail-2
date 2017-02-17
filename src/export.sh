@@ -7,7 +7,7 @@ cp flag.pdf /mnt/
 sync && umount /mnt
 
 echo "Encrypt volume..."
-gpg2 --output evidences --encrypt --recipient Severus volume
+gpg2 --output evidence --encrypt --recipient Severus volume
 
 echo "Hide key..."
 gpg2 --output secret.txt --export-secret-key --armor
@@ -15,4 +15,4 @@ g++ -O3 -std=c++14 -lsfml-graphics insert.cpp -o hide
 ./hide orig.png secret.txt wallpaper.png
 
 echo "Collect exports..."
-mv hide wallpaper.png evidences export/
+mv hide wallpaper.png evidence export/
